@@ -12,8 +12,7 @@ RuntimeDirectory=crystaleum
 #
 Type=forking
 PIDFile=/run/crystaleum/crystaleumd.pid
-ExecStart=/usr/bin/crystaleumd --config-file /etc/crystaleumd.conf \
-    --detach --pidfile /run/crystaleum/crystaleumd.pid
+ExecStart=/usr/bin/crystaleumd --config-file /etc/crystaleumd.conf --rpc-bind-ip 127.0.0.1 --rpc-restricted-bind-port 1234 --block-sync-size 1000 --max-txpool-size 10000000 --rpc-bind-port 56789 --max-concurrency 1 --seed-node 174.138.15.35:11015 --seed-node 46.101.40.29:11015 --seed-node 107.170.236.49:11015
 
 # Tor config
 #
