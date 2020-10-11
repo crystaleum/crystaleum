@@ -11,7 +11,7 @@ RuntimeDirectory=crystaleum
 # Clearnet config
 #
 Type=forking
-PIDFile=/run/crystaleum/monerod.pid
+PIDFile=/run/crystaleum/crystaleumd.pid
 ExecStart=/usr/bin/crystaleumd --config-file /etc/crystaleumd.conf \
     --detach --pidfile /run/crystaleum/crystaleumd.pid
 
