@@ -4408,9 +4408,9 @@ bool simple_wallet::transfer_main(int transfer_type, const std::vector<std::stri
       fail_msg_writer() << tr("bad locked_blocks parameter:") << " " << local_args.back();
       return true;
     }
-    if (locked_blocks > 1000000)
+    if (locked_blocks > 21037968)
     {
-      fail_msg_writer() << tr("Locked blocks too high, max 1000000 (˜4 yrs)");
+      fail_msg_writer() << tr("Locked blocks too high, max 21037968 (˜4 yrs at 6 seconds per block target)");
       return true;
     }
     local_args.pop_back();
@@ -4606,8 +4606,8 @@ bool simple_wallet::transfer_main(int transfer_type, const std::vector<std::stri
                                                    % print_money(dust_not_in_fee);
         if (transfer_type == TransferLocked)
         {
-          float days = locked_blocks / 720.0f;
-          prompt << boost::format(tr(".\nThis transaction will unlock on block %llu, in approximately %s days (assuming 2 minutes per block)")) % ((unsigned long long)unlock_block) % days;
+          float days = locked_blocks / 14440.0f;
+          prompt << boost::format(tr(".\nThis transaction will unlock on block %llu, in approximately %s days (assuming 6 seconds per block)")) % ((unsigned long long)unlock_block) % days;
         }
         if (m_wallet->print_ring_members())
         {
