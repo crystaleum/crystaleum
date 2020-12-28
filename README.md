@@ -1,4 +1,4 @@
-# Electronero
+# Crystaleum
 
 Source code forked from Monero
 
@@ -12,10 +12,10 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.`
 
 ## Development resources
 
-- Web: [electronero.org](https://electronero.org)
-- Chat: [t.me/electronero](https://t.me/electronero)
-- Mail: [support@electronero.org](mailto:support@electronero.org)
-- GitHub: [github.com/electronero/electronero](https://github.com/electronero/electronero)
+- Web: [Crystaleum.org](https://Crystaleum.org)
+- Chat: [t.me/Crystaleum](https://t.me/Crystaleum)
+- Mail: [support@crystaleum.org](mailto:support@crystaleum.org)
+- GitHub: [github.com/Crystaleum/Crystaleum](https://github.com/Crystaleum/Crystaleum)
 
 ## Vulnerability response
 
