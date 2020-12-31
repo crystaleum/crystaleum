@@ -391,12 +391,16 @@ namespace nodetool
     else
     {
       full_addrs.insert("46.101.40.29:11015"); 
+      full_addrs.insert("161.97.121.92:11015"); 
+      full_addrs.insert("161.97.121.89:11015"); 
+      full_addrs.insert("161.97.121.84:11015"); 
+      full_addrs.insert("161.97.121.104:11015"); 
+      full_addrs.insert("168.119.55.152:11015");
+      full_addrs.insert("208.87.132.191:11015");
       full_addrs.insert("107.170.236.49:11015"); 
       full_addrs.insert("174.138.15.35:11015");
       full_addrs.insert("142.93.38.51:11015");
       full_addrs.insert("104.248.162.18:11015");
-      full_addrs.insert("168.119.55.152:11015");
-      full_addrs.insert("208.87.132.191:11015");
     }
     return full_addrs;
   }
