@@ -13,6 +13,7 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.`
 ## Development resources
 
 - Web: [Crystaleum.org](https://Crystaleum.org)
+- Wallet: [CrystalID](https://id.Crystaleum.org)
 - Chat: [t.me/Crystaleum](https://t.me/Crystaleum)
 - Mail: [support@crystaleum.org](mailto:support@crystaleum.org)
 - GitHub: [github.com/Crystaleum/Crystaleum](https://github.com/Crystaleum/Crystaleum)
