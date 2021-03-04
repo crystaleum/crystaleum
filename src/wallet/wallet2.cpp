@@ -5339,16 +5339,27 @@ uint64_t wallet2::get_dynamic_per_kb_fee_estimate() const
   if (!result)
     return fee;
   LOG_PRINT_L1("Failed to query per kB fee, using " << print_money(FEE_PER_KB));
-  return FEE_PER_KB;
+          if (use_fork_rules(17, 10)) {
+		  return FEE_PER_KB_V3;
+	  }
+	  else {
+		  return FEE_PER_KB;
+	  }
 }
 //----------------------------------------------------------------------------------------------------
 uint64_t wallet2::get_per_kb_fee() const
 {
   if(m_light_wallet)
     return m_light_wallet_per_kb_fee;
-  bool use_dyn_fee = use_fork_rules(HF_VERSION_DYNAMIC_FEE, -720 * 1);
-  if (!use_dyn_fee)
-    return FEE_PER_KB;
+  bool use_dyn_fee = use_fork_rules(HF_VERSION_DYNAMIC_FEE, 10);
+  if (!use_dyn_fee){
+	  if (use_fork_rules(17, 10)) {
+		  return FEE_PER_KB_V3;
+	  }
+	  else {
+		  return FEE_PER_KB;
+	  }
+  }
 
   return get_dynamic_per_kb_fee_estimate();
 }
