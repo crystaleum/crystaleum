@@ -163,11 +163,11 @@ namespace cryptonote {
     // rounding (floor) base reward
     if (version > 7)
     {
-    base_reward = base_reward / round_factor * round_factor;
+      base_reward = base_reward / round_factor * round_factor;
     }
     if (version < 2) 
     {
-     base_reward = (MONEY_SUPPLY_ETN - already_generated_coins) >> emission_speed;
+      base_reward = (MONEY_SUPPLY_ETN - already_generated_coins) >> emission_speed;
     }
    // maybe throw chain into final subsidy after genesis? todo
    // maybe work on better final subsidy later - todo, once emissions is final 
@@ -175,6 +175,10 @@ namespace cryptonote {
     if (base_reward < FINAL_SUBSIDY_ACTIVATOR){
      if (already_generated_coins >= TOKEN_SUPPLY){
        base_reward = FINAL_SUBSIDY_PER_MINUTE;
+     }
+     if (version >= 17)
+     {
+       base_reward = FINAL_SUBSIDY_PER_BLOCK;
      }
     }
     
