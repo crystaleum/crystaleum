@@ -63,7 +63,7 @@
 #define COIN                                            ((uint64_t)1000000000000) // 1 * pow(10, 12)
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (20)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)1200000) // 0.000001200000 CRFI
-#define FINAL_SUBSIDY_PER_BLOCK                         ((uint64_t)1392468) // 0.000001392468 CRFI
+#define FINAL_SUBSIDY_PER_BLOCK                         ((uint64_t)392468)  // 0.000000392468 CRFI
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       240 * 1024    // 240kB, used for emissions
