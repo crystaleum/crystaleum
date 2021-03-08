@@ -58,6 +58,7 @@ using namespace epee;
 #define MAINNET_HARDFORK_V14_HEIGHT ((uint64_t)(337816)) // MAINNET v14 hard fork
 #define MAINNET_HARDFORK_V15_HEIGHT ((uint64_t)(337838)) // MAINNET v15 hard fork 
 #define MAINNET_HARDFORK_CRYSTALEUM_HEIGHT ((uint64_t)(500060)) // MAINNET crystaleum hard fork
+#define MAINNET_HARDFORK_V17_HEIGHT ((uint64_t)(1012915)) // MAINNET v17 hard fork 
 
 #define TESTNET_ELECTRONERO_HARDFORK ((uint64_t)(12746)) // Electronero TESTNET fork height
 #define TESTNET_HARDFORK_V1_HEIGHT ((uint64_t)(1)) // TESTNET v1 
