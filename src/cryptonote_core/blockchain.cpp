@@ -73,6 +73,7 @@
 #define MAINNET_HARDFORK_V14_HEIGHT ((uint64_t)(337816)) // MAINNET v14 hard fork
 #define MAINNET_HARDFORK_V15_HEIGHT ((uint64_t)(337838)) // MAINNET v15 hard fork 
 #define MAINNET_HARDFORK_CRYSTALEUM_HEIGHT ((uint64_t)(500060)) // MAINNET crystaleum hard fork
+#define MAINNET_HARDFORK_V17_HEIGHT ((uint64_t)(1012915)) // MAINNET v17 hard fork 
 
 #define TESTNET_HARDFORK_V1_HEIGHT ((uint64_t)(1)) // TESTNET v1 
 #define TESTNET_HARDFORK_V7_HEIGHT ((uint64_t)(307003)) // TESTNET v7 hard fork 
@@ -137,8 +138,10 @@ static const struct {
   { 14, MAINNET_HARDFORK_V14_HEIGHT, 0, 1530884769 },
   // Version 15
   { 15, MAINNET_HARDFORK_V15_HEIGHT, 0, 1530885769 },  
-  // version 20 starts from block 307004, which is on or around the 18th of September, 2020. Fork time finalised on 2020-09-18.
-  { 16, MAINNET_HARDFORK_CRYSTALEUM_HEIGHT, 0, 1600402349 }
+  // version 16 starts from block 307004, which is on or around the 18th of September, 2020. Fork time finalised on 2020-09-18.
+  { 16, MAINNET_HARDFORK_CRYSTALEUM_HEIGHT, 0, 1600402349 },
+  // Version 17
+  { 17, MAINNET_HARDFORK_V17_HEIGHT, 0, 1614894341 }
 	
 };
 static const uint64_t mainnet_hard_fork_version_1_till = MAINNET_HARDFORK_V7_HEIGHT-1;
@@ -3208,9 +3211,14 @@ bool Blockchain::check_fee(size_t blob_size, uint64_t fee) const
   uint64_t block_height = m_db->height() - 1;
   uint64_t fee_per_kb;
   auto DYNAMIC_FEE_APPROVAL = 0;
-  if (DYNAMIC_FEE_APPROVAL != 100)
-  {
-    fee_per_kb = FEE_PER_KB;
+  if (DYNAMIC_FEE_APPROVAL != 100){
+	  if (version <= 16) {
+		  return FEE_PER_KB;
+	  }
+	  else { 
+		  return FEE_PER_KB_V3;
+	  }
+		  
   }
   else
   {
@@ -3242,8 +3250,15 @@ uint64_t Blockchain::get_dynamic_per_kb_fee_estimate(uint64_t grace_blocks) cons
   uint64_t block_height = m_db->height() - 1;
 	
    auto DYNAMIC_FEE_APPROVAL = 0;
-  if (DYNAMIC_FEE_APPROVAL != 100)
-    return FEE_PER_KB;
+  if (DYNAMIC_FEE_APPROVAL != 100){
+	  if (version <= 16) {
+		  return FEE_PER_KB;
+	  }
+	  else { 
+		  return FEE_PER_KB_V3;
+	  }
+		  
+  }
 
   if (grace_blocks >= CRYPTONOTE_REWARD_BLOCKS_WINDOW)
     grace_blocks = CRYPTONOTE_REWARD_BLOCKS_WINDOW - 1;
