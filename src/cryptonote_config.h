@@ -78,7 +78,7 @@
 #define FEE_PER_KB_OLD                                  ((uint64_t)120000) // .1 * pow(10, 1)
 #define FEE_PER_KB_V2                                   ((uint64_t)120000) // .4 * pow(10, 1)
 #define FEE_PER_KB                                      ((uint64_t)120000) // 0.000000120000 
-#define FEE_PER_KB_V3                                   ((uint64_t)20000000) // 0.000020000000
+#define FEE_PER_KB_V3                                   ((uint64_t)1000000) //0.000001000000
 #define DYNAMIC_FEE_PER_KB_BASE_FEE                     ((uint64_t)2500000000) // .25 * pow(10, 8)
 #define DYNAMIC_FEE_PER_KB_BASE_BLOCK_REWARD            ((uint64_t)2500000000) // .25 * pow(10, 8)
 #define DYNAMIC_FEE_PER_KB_BASE_FEE_V5                  ((uint64_t)20000000 * (uint64_t)CRYPTONOTE_TX_FEE_RESERVED_SIZE / CRYPTONOTE_BLOCK_FEE_REWARD_ZONE_V5)
@@ -169,7 +169,7 @@ namespace config
 {
   uint64_t const DEFAULT_FEE_ATOMIC_XMR_PER_KB = 500;
   uint8_t const FEE_CALCULATION_MAX_RETRIES = 10;
-  uint64_t const DEFAULT_DUST_THRESHOLD = ((uint64_t)20000000); // 2 * pow(10, 7)
+  uint64_t const DEFAULT_DUST_THRESHOLD = ((uint64_t)1000000); // 2 * pow(10, 7)
   uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000000); // pow(10, 8)
   std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 343; //cx
