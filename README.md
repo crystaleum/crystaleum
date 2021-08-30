@@ -1,92 +1,132 @@
-# Crystaleum
+# Electronero Network
 
-Source code forked from Monero
+## EI-1.0 Electronero legacy Cryptonote coins
+ETNX / ETNXP / LTNX / GLDX / CRFI  </br>
+ 
+## EI-2.0 Electronero Smart Chain
+xAssets & XRC-20 tokens are minted for token swaps & airdrops on Electronero Smart Chain. </br>
+EI-2.0 is Deploying main net on 09/09/2021. EI-1.0 holders will be airdropped xAssets at various rates through cross-chain atomic swaps.</br>
+More intel released on the website and through social media. </br>
+Electronero Network Core contributors are mainly active on Telegram <a href='https://t.me/electronero'>join the community</a></br>
+xAssets (airdrops & swaps): xETNX / xETNXP / xLTNX / xGLDX / xCRFI / xXMR / xETN
 
-`Copyright (c) 2014-2018 The Monero Project.  
-Portions Copyright (c) 2017-2018 The Electroneum developers.
+Source code forked from Monero, Blockchain forked from Electroneum. Many security updates and unique features have been added over the years. 
+
+`Copyright (c) 2014-2018 The Monero Project.
+Portions Copyright (c) 2012-2013 The Cryptonote developers.
+Portions Copyright (c) 2017-2018 The Electroneum developers.  
 Portions Copyright (c) ~2018 The Masari developers.
 Portions Copyright (c) ~2018 The Sumokoin developers.
 Portions Copyright (c) ~2018 The Stellite developers.
-Portions Copyright (c) 2012-2013 The Cryptonote developers.`
+Portions Copyright (c) 2014-2018 The Electronero Project.  
+Portions Copyright (c) 2014-2018 The Electronero Pulse Project.  
+Portions Copyright (c) 2014-2018 The Litenero Project.  
+Portions Copyright (c) 2014-2018 The Goldnero Project.  
+Portions Copyright (c) 2014-2018 The Crystaleum Project.`
 
+## Table of Contents
+
+  - [Development resources](#development-resources)
+  - [Vulnerability response](#vulnerability-response)
+  - [Research](#research)
+  - [Announcements](#announcement)
+  - [Introduction](#introduction)
+  - [About this project](#about-this-project)
+  - [Supporting the project](#supporting-the-project)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Compiling Electronero from source](#compiling-crystaleum-from-source)
+    - [Dependencies](#dependencies)
 
 ## Development resources
 
-- Web: [Crystaleum.org](https://Crystaleum.org)
-- Wallet: [CrystalID](https://id.Crystaleum.org)
-- Chat: [t.me/Crystaleum](https://t.me/Crystaleum)
-- Mail: [support@crystaleum.org](mailto:support@crystaleum.org)
-- GitHub: [github.com/Crystaleum/Crystaleum](https://github.com/Crystaleum/Crystaleum)
+electronero ETNX - Web: [electronero.org](https://electronero.org)
+electronero pulse ETNXP - Web: [electroneropulse.org](https://electroneropulse.org)
+litenero LTNX - Web: [litenero.org](https://litenero.org)
+goldnero GLDX - Web: [goldnero.org](https://goldnero.org)
+crystaleum CRFI - Web: [crystaleum.org](https://crystaleum.org)
+electronero unnoffical - Chat: [t.me/electronero](https://t.me/electronero)
+electronero network - Chat: [t.me/electronero_network](https://t.me/electronero_network)
+electronero pulse - Chat: [t.me/etnxp](https://t.me/etnxp)
+litenero - Chat: [t.me/litenero](https://t.me/litenero)
+goldnero - Chat: [t.me/goldnero](https://t.me/goldnero)
+crystaleum - Chat: [t.me/crystaleum](https://t.me/crystaleum)
+electronero core - Mail: [support@electronero.org](mailto:support@electronero.org)
+electronero network - GitHub: [github.com/electronero/electronero](https://github.com/crystaleum/crystaleum)
 
 ## Vulnerability response
 
-- Monero [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
+- Monero source [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
 - Monero is also available via [HackerOne](https://hackerone.com/monero)
 
 ## Announcements
 
-You can subscribe to an [announcement listserv](https://lists.getmonero.org) to get critical announcements from the Monero core team. The announcement list can be very helpful for knowing when software updates are needed.
-
-## Build
-
-| Operating System      | Processor | Status |
-| --------------------- | -------- |--------|
-| Ubuntu 16.04          |  i686    | [![Ubuntu 16.04 i686](https://build.getmonero.org/png?builder=monero-static-ubuntu-i686)](https://build.getmonero.org/builders/monero-static-ubuntu-i686)
-| Ubuntu 16.04          |  amd64   | [![Ubuntu 16.04 amd64](https://build.getmonero.org/png?builder=monero-static-ubuntu-amd64)](https://build.getmonero.org/builders/monero-static-ubuntu-amd64)
-| Ubuntu 16.04          |  armv7   | [![Ubuntu 16.04 armv7](https://build.getmonero.org/png?builder=monero-static-ubuntu-arm7)](https://build.getmonero.org/builders/monero-static-ubuntu-arm7)
-| Debian Stable         |  armv8   | [![Debian armv8](https://build.getmonero.org/png?builder=monero-static-debian-armv8)](https://build.getmonero.org/builders/monero-static-debian-armv8)
-| OSX 10.10             |  amd64   | [![OSX 10.10 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.10)](https://build.getmonero.org/builders/monero-static-osx-10.10)
-| OSX 10.11             |  amd64   | [![OSX 10.11 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.11)](https://build.getmonero.org/builders/monero-static-osx-10.11)
-| OSX 10.12             |  amd64   | [![OSX 10.12 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.12)](https://build.getmonero.org/builders/monero-static-osx-10.12)
-| FreeBSD 11            |  amd64   | [![FreeBSD 11 amd64](https://build.getmonero.org/png?builder=monero-static-freebsd64)](https://build.getmonero.org/builders/monero-static-freebsd64)
-| DragonFly BSD 4.6     |  amd64   | [![DragonFly BSD amd64](https://build.getmonero.org/png?builder=monero-static-dragonflybsd-amd64)](https://build.getmonero.org/builders/monero-static-dragonflybsd-amd64)
-| Windows (MSYS2/MinGW) |  i686    | [![Windows (MSYS2/MinGW) i686](https://build.getmonero.org/png?builder=monero-static-win32)](https://build.getmonero.org/builders/monero-static-win32)
-| Windows (MSYS2/MinGW) |  amd64   | [![Windows (MSYS2/MinGW) amd64](https://build.getmonero.org/png?builder=monero-static-win64)](https://build.getmonero.org/builders/monero-static-win64)
-
-## Coverage
-
-| Type      | Status |
-|-----------|--------|
-| Coverity  | [![Coverity Status](https://scan.coverity.com/projects/9657/badge.svg)](https://scan.coverity.com/projects/9657/)
-| Coveralls | [![Coveralls Status](https://coveralls.io/repos/github/monero-project/monero/badge.svg?branch=master)](https://coveralls.io/github/monero-project/monero?branch=master)
-| License   | [![License](https://img.shields.io/badge/license-BSD3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+You can subscribe to [crystaleum announcements](https://t.me/crfinews) [electronero announcements](https://t.me/etnxnews) to get critical announcements from Electronero core. The announcement list can be very helpful for knowing when software updates are needed, etc. 
 
 ## Introduction
 
-Electronero is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
+Crystaleum is a private, secure, untraceable, decentralised digital currency. You are your bank, you control your funds, and nobody can trace your transfers unless you allow them to do so.
 
-**Privacy:** Electronero uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
+**Privacy:** Crystaleum uses a cryptographically sound system to allow you to send and receive funds without your transactions being easily revealed on the blockchain (the ledger of transactions that everyone has). This ensures that your purchases, receipts, and all transfers remain absolutely private by default.
 
 **Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
-**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Monero is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+**Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Crystaleum is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
 ## Supporting the project
 
-Electronero is a 100% community-sponsored endeavor. If you want to join our efforts, the easiest thing you can do is support the project financially. Electronero donations can be made to the Electronero donation address via the `donate` command (type `help` in the command-line wallet for details). Else, here are our dev teams addresses. The funding goes to many developers who contribute and believe me, they are greatful for our assistance! 
+Crystaleum is a 100% community driven endeavor. To join community efforts, the easiest thing you can do is support the project financially. Crystaleum donations can be made to the Crystaleum donation address via the `donate` command (type `help` in the command-line wallet for details). Else, here are our dev teams addresses. The funding goes to many developers, and volunteers who contribute, they are grateful for our donations! 
 
-The Monero donation address is: `449JLhz9p6756c5tGACveuX76qa8UxMkFMd5uqG9SEJ3LcVJLjh4KvxJQ1Pf4yJmYgQRTrNPZhaga8eYynVqHfac9VWhF1m`
+The Monero donation address is: `85PTaJNpkEEeJao2MNk1sRWTQXLUf1FGjZew8oR8R4cRUrXxFrTexa9GwrjmJD4Pyx6UrjgMQnuMoFNmaBKqxs7PPXVe9oX`
 
 The Bitcoin donation address is: `38jiBKevQHp8zhQpZ42bTvK4QpzzqWkA3K`
 
-The Electronero donation address is: `etnkHfFuanNeTe3q9dux4d9cRiLkUR4hDffvhfTp6nbhEJ5R8TY4vdyZjT4BtWxnvSJ5nfD64eCAQfKMJHSym2dj8PQqeiKmBM` 
+The Ethereum donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The Tether USD donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The ZCash donation address is: `t1Kmnv9eDqw7VyDWmzSUbjBPrxoY7hMuUCc` 
+
+The Liquid donation address is: `VJL9H2mk4tKBRgSkTNkSrFGQABiNxUs1UPbm4rHCsE8vF87kSJgSo8AQfGDt54nC59tEtb2W47GsMrw2` 
+
+The Crystaleum donation address is: `etnkHfFuanNeTe3q9dux4d9cRiLkUR4hDffvhfTp6nbhEJ5R8TY4vdyZjT4BtWxnvSJ5nfD64eCAQfKMJHSym2dj8PQqeiKmBM` 
 
 The Electroneum donation address is: `etnkHfFuanNeTe3q9dux4d9cRiLkUR4hDffvhfTp6nbhEJ5R8TY4vdyZjT4BtWxnvSJ5nfD64eCAQfKMJHSym2dj8PQqeiKmBM` 
 
-The Litecoin donation address is: `LfUVH96Ey1jj1FzJSriE9kpSvL2eNzEBG5`
+The Dogecoin donation address is: `DTTez7ggKPzDcKuUUTns8VzMrKesZUKMCk` 
 
-The Bitcoin Cash donation address is: `qpwvqz4kkhe96ggthpcg4aj5y62zftzxegwcl78a4u`
+The Litecoin donation address is: `MAtV7sbBnmuf2bxVUPgCprpmJ5xX6euBwe`
 
 The Sumokoin donation address is: `Sumoo47CGenbHfZtpCVV4PRMSsXP38idFdt5JSj7VuJrD1nABoPHTBHgR6owQJfn1JU8BiWWohw4oiefGEjAn4GmbFYYtCcfPeT`
+
+The Aave donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The Attention Token  donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The Cardano ADA donation address is: `DdzFFzCqrhspgQJTD1r81KsmXjzySdu4Zb4pJf7iLxkcVKvoRLoVHss9f2147QTRCRkQAFjWwHdr77Snn3efEo9ne4YzM5UCwwnMGR15` 
+
+The Compound donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The Dash donation address is: `XcFVDo2k3XRJwQKQQRgMBfhCEDFANawQ3B` 
+
+The Maker donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The Paxos Standard donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The REN donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The TrueUSD donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
+
+The USDCoin donation address is: `0x59d26980a1cdd75e1c3af516b912a6233aa2f5e4` 
 
 
 ## About this project
 
-This is the core implementation of Monero. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Monero that uses the protocol and network in a compatible manner.
+This is a modified core implementation of Monero/Electroneum. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Monero that uses the protocol and network in a compatible manner.
 
 As with many development projects, the repository on Github is considered to be the "staging" area for the latest changes. Before changes are merged into that branch on the main repository, they are tested by individual developers in their own branches, submitted as a pull request, and then subsequently tested by contributors who focus on testing and code reviews. That having been said, the repository should be carefully considered before using it in a production environment, unless there is a patch in the repository for a particular show-stopping issue you are experiencing. It is generally a better idea to use a tagged release for stability.
 
-**Anyone is welcome to contribute to Monero's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
+**Anyone is welcome to contribute to Crystaleum's codebase!** If you have a fix or code change, feel free to submit it as a pull request directly to the "master" branch. In cases where the change is relatively small or does not affect other parts of the codebase it may be merged in immediately by any one of the collaborators. On the other hand, if the change is particularly large or complex, it is expected that it will be discussed at length either well in advance of the pull request being submitted, or even directly on the pull request.
 
 ## License
 
@@ -94,32 +134,18 @@ See [LICENSE](LICENSE).
 
 ## Contributing
 
-If you want to help out, see [CONTRIBUTING](CONTRIBUTING.md) for a set of guidelines.
+If you want to help out, join Crystaleum Network Core Contributors. <a href="https://t.me/Crystaleum">Contact us on Telegram.</a></br>
+See [CONTRIBUTING](CONTRIBUTING.md) for a set of guidelines.
 
 ## Scheduled software upgrades
 
-Monero uses a fixed-schedule software upgrade (hard fork) mechanism to implement new features. This means that users of Monero (end users and service providers) should run current versions and upgrade their software on a regular schedule. Software upgrades occur during the months of April and October. The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper Monero software version. Below is the historical schedule and the projected schedule for the next upgrade.
-Dates are provided in the format YYYY-MM-DD. 
-
-
-| Software upgrade block height | Date       | Fork version | Minimum Monero version | Recommended Monero version | Details                                                                            |  
-| ------------------------------ | -----------| ----------------- | ---------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
-| 1009827                        | 2016-03-22 | v2                | v0.9.4                 | v0.9.4                     | Allow only >= ringsize 3, blocktime = 120 seconds, fee-free blocksize 60 kb       |
-| 1141317                        | 2016-09-21 | v3                | v0.9.4                 | v0.10.0                    | Splits coinbase into denominations  |
-| 1220516                        | 2017-01-05 | v4                | v0.10.1                | v0.10.2.1                  | Allow normal and RingCT transactions |
-| 1288616                        | 2017-04-15 | v5                | v0.10.3.0              | v0.10.3.1                  | Adjusted minimum blocksize and fee algorithm      |
-| 1400000                        | 2017-09-16 | v6                | v0.11.0.0              | v0.11.0.0                  | Allow only RingCT transactions, allow only >= ringsize 5      |
-| 1546000                        | 2018-04-06 | v7                | v0.12.0.0              | v0.12.0.0                  | Cryptonight variant 1, ringsize >= 7, sorted inputs
-| 337838                        | 2018-07-11 | v15                | v12.3.0               | v12.3.1                  | Cryptonight fast, variant 4, ringsize >=1
-| xxxxxx                        | 2018-10-30 | v16                | v12.3.4               | v12.3.5                  | ETNXP, supply burn
-
-X's indicate that these details have not been determined as of commit date.
+Crystaleum utilizes a software upgrade (hard fork) mechanism to implement new features. This means that users of Crystaleum (end users and service providers) should run current versions and upgrade their software on a regular basis. The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper Crystaleum software version. 
 
 ## Release staging schedule and protocol
 
 Approximately three months prior to a scheduled software upgrade, a branch from Master will be created with the new release version tag. Pull requests that address bugs should then be made to both Master and the new release branch. Pull requests that require extensive review and testing (generally, optimizations and new features) should *not* be made to the release branch. 
 
-## Compiling Electronero from source
+## Compiling Crystaleum from source
 
 ### Dependencies
 
@@ -153,22 +179,48 @@ library archives (`.a`).
 | Graphviz     | any           | NO       | `graphviz`         | `graphviz`   | `graphviz`        | YES      | Documentation  |
 
 
-[^] On Debian/Ubuntu `libgtest-dev` only includes sources and headers. You must
-build the library binary manually. This can be done with the following command ```sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libg* /usr/lib/ ```
+[1] On Debian/Ubuntu `libgtest-dev` only includes sources and headers. You must
+build the library binary manually. This can be done with the following command `sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make`
+Then:
+
+* on Debian:
+  `sudo mv libg* /usr/lib/`
+* on Ubuntu:
+  `sudo mv lib/libg* /usr/lib/`
+
+[2] libnorm-dev is needed if your zmq library was built with libnorm, and not needed otherwise
+
+Install all dependencies at once on Debian/Ubuntu:
+
+``` sudo apt update && sudo apt install build-essential cmake pkg-config libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev libpgm-dev qttools5-dev-tools libhidapi-dev libusb-1.0-0-dev libprotobuf-dev protobuf-compiler libudev-dev libboost-chrono-dev libboost-date-time-dev libboost-filesystem-dev libboost-locale-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libboost-thread-dev ccache doxygen graphviz ```
+
+Install all dependencies at once on openSUSE:
+
+``` sudo zypper ref && sudo zypper in cppzmq-devel  ldns-devel libboost_chrono-devel libboost_date_time-devel libboost_filesystem-devel libboost_locale-devel libboost_program_options-devel libboost_regex-devel libboost_serialization-devel libboost_system-devel libboost_thread-devel libexpat-devel libminiupnpc-devel libsodium-devel libunwind-devel unbound-devel  cmake doxygen ccache fdupes gcc-c++ libevent-devel libopenssl-devel pkgconf-pkg-config readline-devel  xz-devel libqt5-qttools-devel patterns-devel-C-C++-devel_C_C++```
+
+Install all dependencies at once on macOS with the provided Brewfile:
+``` brew update && brew bundle --file=contrib/brew/Brewfile ```
+
+FreeBSD 12.1 one-liner required to build dependencies:
+```pkg install git gmake cmake pkgconf boost-libs libzmq4 libsodium```
 
 ### Cloning the repository
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/electronero/electronero`
+`$ git clone --recursive https://github.com/crystaleum/crystaleum`
 
 If you already have a repo cloned, initialize and update:
 
-`$ cd electronero && git submodule init && git submodule update`
+`$ cd Crystaleum && git submodule init && git submodule update && cd coins/Crystaleum && git submodule init && git submodule update && make -j2 && cd ../electroneropulse && git submodule init && git submodule update && make -j2 && cd ../litenero && git submodule init && git submodule update && make -j2 && cd ../goldnero && git submodule init && git submodule update && make -j2 && cd ../crystaleum && git submodule init && git submodule update && make -j2`
+
+*Note*: If there are submodule differences between branches, you may need 
+to use ```git submodule sync && git submodule update``` after changing branches
+to build successfully.
 
 ### Build instructions
 
-Electronero uses the CMake build system and a top-level [Makefile](Makefile) that
+Crystaleum uses the CMake build system and a top-level [Makefile](Makefile) that
 invokes cmake commands as needed.
 
 #### On Linux and OS X
@@ -176,8 +228,7 @@ invokes cmake commands as needed.
 * Install the dependencies
 * Change to the root of the source code directory and build:
 
-        cd electronero
-        make
+        `$ cd Crystaleum && git submodule init && git submodule update && cd coins/Crystaleum && git submodule init && git submodule update && make -j2 && cd ../electroneropulse && git submodule init && git submodule update && make -j2 && cd ../litenero && git submodule init && git submodule update && make -j2 && cd ../goldnero && git submodule init && git submodule update && make -j2 && cd ../crystaleum && git submodule init && git submodule update && make -j2`
 
     *Optional*: If your machine has several cores and enough memory, enable
     parallel build by running `make -j<number of threads>` instead of `make`. For
@@ -187,11 +238,19 @@ invokes cmake commands as needed.
     *Note*: If cmake can not find zmq.hpp file on OS X, installing `zmq.hpp` from
     https://github.com/zeromq/cppzmq to `/usr/local/include` should fix that error.
 
-* The resulting executables can be found in `build/release/bin`
+* The resulting Crystaleum Network executables can be found in `build/release/bin` for each Crystaleum Network coin in `coins/` dir
 
-* Add `PATH="$PATH:$HOME/electronero/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/crystaleum/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/electroneropulse/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/litenero/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/goldnero/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/crystaleum/build/release/bin"` to `.profile`
 
-* Run Electronero with `electronerod --detach`
+* Run Electronero `electronerod`
+* Run Electronero Pulse `pulsed`
+* Run Litenero `litenerod`
+* Run Goldnero `goldnerod`
+* Run Crystaleum `crystaleumd`
 
 * **Optional**: build and run the test suite to verify the binaries:
 
@@ -219,7 +278,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * `apt-get update && apt-get upgrade` to install all of the latest software
 
-* Install the dependencies for Electronero from the 'Debian' column in the table above.
+* Install the dependencies for Crystaleum from the 'Debian' column in the table above.
 
 * Increase the system swap size:
 ```
@@ -228,29 +287,20 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 	CONF_SWAPSIZE=1024  
 	sudo /etc/init.d/dphys-swapfile start  
 ```
-* Clone electronero and checkout most recent release version:
+* Clone Crystaleum and checkout most recent release version:
 ```
-        git clone https://github.com/electronero/electronero.git
-	cd electronero
-	git checkout tags/v0.11.1.0
+        git clone https://github.com/crystaleum/crystaleum.git
 ```
 * Build:
-```
-        make release
-```
-* Wait 4-6 hours
+`$ cd electronero && git submodule init && git submodule update && cd coins/electronero && git submodule init && git submodule update && make -j2 && cd ../electroneropulse && git submodule init && git submodule update && make -j2 && cd ../litenero && git submodule init && git submodule update && make -j2 && cd ../goldnero && git submodule init && git submodule update && make -j2`
 
-* The resulting executables can be found in `build/release/bin`
-
-* Add `PATH="$PATH:$HOME/electronero/build/release/bin"` to `.profile`
-
-* Run Electronero with `electronero --detach`
+* Add `PATH="$PATH:$HOME/crystaleum/build/release/bin"` to `.profile`
 
 * You may wish to reduce the size of the swap file after the build has finished, and delete the boost directory from your home directory
 
 #### *Note for Raspbian Jessie users:*
 
-If you are using the older Raspbian Jessie image, compiling Electronero is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Electronero, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
+If you are using the older Raspbian Jessie image, compiling Crystaleum is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Crystaleum, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
 
 * As before, `apt-get update && apt-get upgrade` to install all of the latest software, and increase the system swap size
 
@@ -261,7 +311,7 @@ If you are using the older Raspbian Jessie image, compiling Electronero is a bit
 	sudo /etc/init.d/dphys-swapfile start  
 ```
 
-* Then, install the dependencies for Electronero except `libunwind` and `libboost-all-dev`
+* Then, install the dependencies for Crystaleum except `libunwind` and `libboost-all-dev`
 
 * Install the latest version of boost (this may first require invoking `apt-get remove --purge libboost*` to remove a previous version if you're not using a clean install):
 ```
@@ -276,7 +326,7 @@ If you are using the older Raspbian Jessie image, compiling Electronero is a bit
 	sudo ./bjam install
 ```
 
-* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone Electronero and checkout most recent release version" step.
+* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone Crystaleum and checkout most recent release version" step.
 
 #### On Windows:
 
@@ -327,12 +377,6 @@ application.
 
 * The resulting executables can be found in `build/release/bin`
 
-### On FreeBSD:
-
-The project can be built from scratch by following instructions for Linux above. If you are running electronero in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
-
-We expect to add Electronero into the ports tree in the near future, which will aid in managing installations using ports or packages.
-
 ### On OpenBSD:
 
 #### OpenBSD < 6.2
@@ -346,7 +390,7 @@ The doxygen and graphviz packages are optional and require the xbase set.
 The Boost package has a bug that will prevent librpc.a from building correctly. In order to fix this, you will have to Build boost yourself from scratch. Follow the directions here (under "Building Boost"):
 https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md
 
-You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Electronero.
+You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Crystaleum.
 
 To build: `env CC=egcc CXX=eg++ CPP=ecpp DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/path/to/the/boost/you/built make release-static-64`
 
@@ -421,7 +465,7 @@ cmake ..
 doas make install
 ```
 
-Build electronero: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static`
+Build Crystaleum: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static`
 
 ### On Solaris:
 
@@ -437,11 +481,11 @@ Then you can run make as usual.
 ### On Linux for Android (using docker):
 
         # Build image (select android64.Dockerfile for aarch64)
-        cd utils/build_scripts/ && docker build -f android32.Dockerfile -t electronero-android .
+        cd utils/build_scripts/ && docker build -f android32.Dockerfile -t crystaleum-android .
         # Create container
-        docker create -it --name electronero-android electronero-android bash
+        docker create -it --name crystaleum-android crystaleum-android bash
         # Get binaries
-        docker cp electronero-android:/opt/android/electronero/build/release/bin .
+        docker cp crystaleum-android:/opt/android/crystaleum/build/release/bin .
 
 ### Building portable statically linked binaries
 
@@ -455,15 +499,15 @@ By default, in either dynamically or statically linked builds, binaries target t
 * ```make release-static-win64``` builds binaries on 64-bit Windows portable across 64-bit Windows systems
 * ```make release-static-win32``` builds binaries on 64-bit or 32-bit Windows portable across 32-bit Windows systems
 
-## Running electronerod
+## Running crystaleumd
 
 The build places the binary in `bin/` sub-directory within the build directory
 from which cmake was invoked (repository root by default). To run in
 foreground:
 
-    ./bin/electronero
+    ./bin/crystaleumd
 
-To list all available options, run `./bin/electronerod --help`.  Options can be
+To list all available options, run `./bin/crystaleumd --help`.  Options can be
 specified either on the command line or in a configuration file passed by the
 `--config-file` argument.  To specify an option in the configuration file, add
 a line with the syntax `argumentname=value`, where `argumentname` is the name
@@ -471,14 +515,14 @@ of the argument without the leading dashes, for example `log-level=1`.
 
 To run in background:
 
-    ./bin/electronerod --log-file electronerod.log --detach
+    ./bin/crystaleumd --log-file crystaleumd.log
 
 To run as a systemd service, copy
-[electronerod.service](utils/systemd/electronerod.service) to `/etc/systemd/system/` and
-[electronerod.conf](utils/conf/electronerod.conf) to `/etc/`. The [example
-service](utils/systemd/electronerod.service) assumes that the user `electronero` exists
+[crystaleumd.service](utils/systemd/crystaleumd.service) to `/etc/systemd/system/` and
+[crystaleumd.conf](utils/conf/crystaleumd.conf) to `/etc/`. The [example
+service](utils/systemd/crystaleumd.service) assumes that the user `crystaleumd` exists in
 and its home is the data directory specified in the [example
-config](utils/conf/electronerod.conf).
+config](utils/conf/crystaleumd.conf).
 
 If you're on Mac, you may need to add the `--max-concurrency 1` option to
-electronero-wallet-cli, and possibly electronerod, if you get crashes refreshing.
+crystaleum-wallet-cli, and possibly crystaleumd, if you get crashes refreshing.
