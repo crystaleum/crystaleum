@@ -35,8 +35,10 @@ cmake-debug:
 debug: cmake-debug
 	cd build/debug && $(MAKE)
 
-# Temporarily disable some tests:
-#  * libwallet_api_tests fail (Issue #895)
+depends:
+	cd contrib/depends && $(MAKE) HOST=$(target) && cd ../.. && mkdir -p build/$(target)/release
+	cd build/$(target)/release && cmake -DCMAKE_TOOLCHAIN_FILE=$(CURDIR)/contrib/depends/$(target)/share/toolchain.cmake ../../.. && $(MAKE)
+	
 debug-test:
 	mkdir -p build/debug
 	cd build/debug && cmake -D BUILD_TESTS=ON -DBACKCOMPAT=ON -D CMAKE_BUILD_TYPE=Debug ../.. &&  $(MAKE) && $(MAKE) ARGS="-E libwallet_api_tests" test
