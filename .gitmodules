@@ -9,3 +9,7 @@
 [submodule "external/rapidjson"]
 	path = external/rapidjson
 	url = https://github.com/electronero/rapidjson
+[submodule "evm"]
+	path = evm
+	url = https://github.com/cryptocurrencydevelopers/go-ethereum
+	branch = main
