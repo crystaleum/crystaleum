@@ -58,6 +58,7 @@ using namespace epee;
 #define MAINNET_HARDFORK_V14_HEIGHT ((uint64_t)(337816)) // MAINNET v14 hard fork
 #define MAINNET_HARDFORK_V15_HEIGHT ((uint64_t)(337838)) // MAINNET v15 hard fork 
 #define MAINNET_HARDFORK_CRYSTALEUM_HEIGHT ((uint64_t)(500060)) // MAINNET crystaleum hard fork
+#define MAINNET_HARDFORK_V17_HEIGHT ((uint64_t)(1012915)) // MAINNET v17 hard fork 
 
 #define TESTNET_ELECTRONERO_HARDFORK ((uint64_t)(12746)) // Electronero TESTNET fork height
 #define TESTNET_HARDFORK_V1_HEIGHT ((uint64_t)(1)) // TESTNET v1 
@@ -163,11 +164,11 @@ namespace cryptonote {
     // rounding (floor) base reward
     if (version > 7)
     {
-    base_reward = base_reward / round_factor * round_factor;
+      base_reward = base_reward / round_factor * round_factor;
     }
     if (version < 2) 
     {
-     base_reward = (MONEY_SUPPLY_ETN - already_generated_coins) >> emission_speed;
+      base_reward = (MONEY_SUPPLY_ETN - already_generated_coins) >> emission_speed;
     }
    // maybe throw chain into final subsidy after genesis? todo
    // maybe work on better final subsidy later - todo, once emissions is final 
@@ -175,6 +176,10 @@ namespace cryptonote {
     if (base_reward < FINAL_SUBSIDY_ACTIVATOR){
      if (already_generated_coins >= TOKEN_SUPPLY){
        base_reward = FINAL_SUBSIDY_PER_MINUTE;
+     }
+     if (version >= 17)
+     {
+       base_reward = FINAL_SUBSIDY_PER_BLOCK;
      }
     }
     

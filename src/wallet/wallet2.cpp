@@ -3130,7 +3130,7 @@ crypto::secret_key wallet2::generate(const std::string& wallet_, const epee::wip
  {
    // -1 month for fluctuations in block time and machine date/time setup.
    // avg seconds per block
-   const int seconds_per_block = DIFFICULTY_TARGET_V1;
+   const int seconds_per_block = DIFFICULTY_TARGET_V3;
    // ~num blocks per month
    const uint64_t blocks_per_month = 60*60*24*30/seconds_per_block;
 
@@ -5339,16 +5339,27 @@ uint64_t wallet2::get_dynamic_per_kb_fee_estimate() const
   if (!result)
     return fee;
   LOG_PRINT_L1("Failed to query per kB fee, using " << print_money(FEE_PER_KB));
-  return FEE_PER_KB;
+          if (use_fork_rules(17, 10)) {
+		  return FEE_PER_KB_V3;
+	  }
+	  else {
+		  return FEE_PER_KB;
+	  }
 }
 //----------------------------------------------------------------------------------------------------
 uint64_t wallet2::get_per_kb_fee() const
 {
   if(m_light_wallet)
     return m_light_wallet_per_kb_fee;
-  bool use_dyn_fee = use_fork_rules(HF_VERSION_DYNAMIC_FEE, -720 * 1);
-  if (!use_dyn_fee)
-    return FEE_PER_KB;
+  bool use_dyn_fee = use_fork_rules(HF_VERSION_DYNAMIC_FEE, 10);
+  if (!use_dyn_fee){
+	  if (use_fork_rules(17, 10)) {
+		  return FEE_PER_KB_V3;
+	  }
+	  else {
+		  return FEE_PER_KB;
+	  }
+  }
 
   return get_dynamic_per_kb_fee_estimate();
 }
@@ -9189,11 +9200,11 @@ uint64_t wallet2::get_daemon_blockchain_target_height(string &err)
 uint64_t wallet2::get_approximate_blockchain_height() const
 {
   // time of v2 fork
-  const time_t fork_time = m_nettype == TESTNET ? 1526030997 : m_nettype == STAGENET ? (time_t)-1/*TODO*/ : 1527643352;
+  const time_t fork_time = m_nettype == TESTNET ? 1526030997 : m_nettype == STAGENET ? (time_t)-1/*TODO*/ : 1600402349;
   // v2 fork block
   const uint64_t fork_block = m_nettype == TESTNET ? 57 : m_nettype == STAGENET ? (uint64_t)-1/*TODO*/ : 307000;
   // avg seconds per block
-  const int seconds_per_block = DIFFICULTY_TARGET_V2;
+  const int seconds_per_block = DIFFICULTY_TARGET_V3;
   // Calculated blockchain height
   uint64_t approx_blockchain_height = fork_block + (time(NULL) - fork_time)/seconds_per_block;
   // testnet got some huge rollbacks, so the estimation is way off
