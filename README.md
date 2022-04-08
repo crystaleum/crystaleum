@@ -71,6 +71,10 @@ Crystaleum is a private, secure, untraceable, decentralised digital currency. Yo
 
 **Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
+**Educational:** Crystaleum provides an educational resource to the communtity of cryptocurrency developers, helping others is our passion. If you would like to learn how to develop cryptocurrency with us, join Crystaleum community development group on telegram! https://t.me/crystaleum
+
+**Smart Contracts:** Crystaleum core merged Ethereum code base from go-ethereum into "evm" the module in this repository may be activated by ```git submodule init && git submodule update``` followed by installation of core Ethereum Virtual Machine components along with the core GETH, which is a command line utility to access the CRYSTAL protocols. 
+
 **Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Crystaleum is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
 ## Supporting the project
