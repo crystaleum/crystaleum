@@ -16,8 +16,15 @@ Portions Copyright (c) 2014-2018 The Crystaleum Project.`
 ## EI-1.0 Electronero legacy Cryptonote coins
 CRFI is the native coin of Crystaleum privacy-centric chain, with the parent blockchain raw imported from Electroneum ETN, and the source code forked from Goldnero GLDX with adaptations from Monero XMR, and inspiration from various other cryptonote coins. CRFI privacy chain (part of EI-1.0 "electronero 1.0") remains in parallell to CRYSTAL aka 💎 public ledger (part of EI-2.0 "electronero 2.0")  </br>
  
-## EI-2.0 Crystaleum  CRFI | (wrapped) CRYSTAL & wCRFI | (bridged) aka💎
+## EI-2.0 Crystaleum  CRFI | (wrapped) CRYSTAL & wCRFI | Alt-Eth POA chain (bridged) aka 
 Crystaleum EVM "ethereum virtual machine" compatibility brings the native Crystaleum CRYSTAL aka 💎 to the Crystaleum ecosystem. Additionally xAssets & XRC-20 tokens are minted for token swaps & airdrops on public ledgers including Ethereum, Binance Smart Chain, Polygon, on Crystaleum native EVM CRYSTAL / 💎 and / or on the future Electronero Smart Chain. </br>
+
+To reveal Crystaleum "evm" 💎
+```git submodule init && git submodule update```
+To install 💎 "evm" 
+```cd evm && go install ./...```
+
+________________________________
 
 EI-2.0 began deployments to public ledgers with various xAssets "Experimental Assets" to ethereum virtual machine compatible main nets on 09/09/2021. EI-1.0 holders will be airdropped xAssets or have exclusive access to Sidechained AIO bridge to swap to and from EI-1.0 && EI-2.0 digital assets at variable rates. The main methods to bridge digital assets between EI-1.0 and EI-2.0 introduced with Sidechained AIO bridge would be decentralized through Webnero including cross-chain atomic swaps, P2P, and more details are to be announced.</br>
 More intel released on the website and through social media. </br>
