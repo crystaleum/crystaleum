@@ -412,8 +412,7 @@ difficulty_type next_difficulty_v4(std::vector<std::uint64_t> timestamps, std::v
     uint64_t low, high;
     mul(total_work, target, low, high);
 
-    if (high != 0) {
-
+    if (high != 0 || low / weighted_timespans == 0) {
         return 1;
     }
     return (low / weighted_timespans);
