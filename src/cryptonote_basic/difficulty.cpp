@@ -162,7 +162,9 @@ namespace cryptonote {
     mul(total_work, target_seconds, low, high);
 // blockchain errors "difficulty overhead" if this function returns zero.
 // TODO: consider throwing an exception instead
-
+    if (high != 0 || low + time_span - 1 < low || (low + time_span - 1) / time_span == 0) {
+        return 1;
+    }
     return (low + time_span - 1) / time_span;
   }
 
